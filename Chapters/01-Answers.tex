@@ -1,7 +1,31 @@
 \chapter{Answers}
 \label{cp:answers}
 \section{Question 1}
-\begin{importantbox}
-    This is the question.
-\end{importantbox}
-\noindent{}This is the answer.
+
+For a \qty{10}{\hertz} motor frequency, the velocity is \qty{12.8}{\meter\per\second}. Per the lab manual, the transition occurs at a Reynolds number of \num{1e5}. Using the equation for Reynolds number, we can find the distance from the leading edge of a theoretical flat plate at which the turbulent transition occurs:
+
+\begin{align}
+    Re &= \frac{\rho V_\infty^2 L}{\mu} \\
+    x &= \frac{Re\cdot\mu}{\rho V_\infty^2} \nonumber \\
+    x &= \frac{\num{1e5}\cdot\qty{1.8e-5}{\newton\second\per\meter\squared}}{\qty{1.225}{\kilo\gram\per\meter\cubed}\cdot\qty{12.8}{\meter\per\second}} \nonumber \\
+    x &= \qty{11.5}{\centi\meter} \nonumber
+\end{align}
+
+Once we have the transition point, we can use the two boundary layer equations to determine the thickness of the boundary layer as a function of the distance from the leading edge of the theoretical flat plate:
+
+\begin{align}
+    \frac{\delta}{x} &= \frac{5.0}{\sqrt{Re_x}}\quad\text{for laminar flow} \\
+    \frac{\delta}{x} &= \frac{0.37}{Re_x^{\frac{1}{5}}}\quad\text{for turbulent flow}
+\end{align}
+
+Using the script attached to this pre-lab, we generated this graph of boundary layer thicknesses:
+
+% The transition point is past the airfoil meaning the flow is laminar completely over the thin plate airfoil because the airfoil length in this lab is only .101 m. The boundry layer at the end of the thin plate will be 0.0017 m for laminar flow using the equation: 
+
+% Delta/x = 5.0 / sqrt(Re) where x = .101 and Re = rho*V*x/mu 
+
+% Since the anemometer will be downstream from the airfoil instead of at the trailing edge, the flow will be turbulent where the boundry layer is measured.  The boundry layer would be approximately 8 mm thick on each side of the plate using the equation Delta/x = 0.37 / Re^1/5 where x = .25 and Re = rho*V*x/mu.  
+
+% To completely capture the velocity profile, the measurements will need to start more than 8mm below the plate and end more than 8mm above the plate. Taking measurements at 5 mm increments starting 15 millimeters below the airfoil and ending 15 mm above will provide ample coverage. 
+
+% Considering the airfoil used in this lab is not a flat plate and the increasing angle of attack will create a bigger wake, therefore the starting and ending positions may need to increase. 
